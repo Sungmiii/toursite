@@ -45,23 +45,66 @@ body {
 
 .text-box {
     position:absolute;
-    top:50%;
+    top:40%;
     left:50%;
     transform: translate(-50%, -50%)
 }
+
 .heading-primary {
     color: #fff;
     text-transform: uppercase; 
 }
+
 .heading-primary-title{
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 35px;
     display: block;
+    animation: moveinLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 3;
+    animation-iteration-count: 3; */
+    
 }
+
+
 .heading-primary-sub{
     font-size: 20px;
     font-weight: 400;
     display: block;
     letter-spacing: 40.5px;
+    animation: moveinRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveinLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+@keyframes moveinRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
 }
