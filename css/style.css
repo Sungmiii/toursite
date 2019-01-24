@@ -47,12 +47,14 @@ body {
     position:absolute;
     top:40%;
     left:50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
     color: #fff;
     text-transform: uppercase; 
+    backface-visibility: hidden; /* sometime anymation is shaking, this property is preventing the shaking */
 }
 
 .heading-primary-title{
@@ -60,11 +62,15 @@ body {
     font-weight: 700;
     letter-spacing: 35px;
     display: block;
-    animation: moveinLeft;
+    animation: moveinLeft 1s ease-out;
+    
+    /* 
+    animation: name duration timing-function delay iteration-count direction fill-mode;
     animation-duration: 1s;
     animation-timing-function: ease-out;
-    /* animation-delay: 3;
-    animation-iteration-count: 3; */
+    animation-delay: 3;
+    animation-iteration-count: 3; 
+    */
     
 }
 
@@ -76,7 +82,8 @@ body {
     letter-spacing: 40.5px;
     animation: moveinRight;
     animation-duration: 1s;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in;
+    margin-bottom: 3em;
 }
 
 @keyframes moveinLeft {
@@ -106,5 +113,67 @@ body {
     100% {
         opacity: 1;
         transform: translateX(0)
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1em 3em;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;  /* make animation smoother */
+    position: relative;
+ 
+}
+
+.btn-animation {
+    animation: movinBtn .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);/* xdirection */
+}
+.btn:active {
+    transform: translateY(-1px);
+}
+.btn-white {
+    background-color: white;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-white::after {
+    background-color: white;
+}
+
+@keyframes movinBtn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0)
     }
 }
