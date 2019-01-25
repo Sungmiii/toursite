@@ -1,26 +1,22 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/  
-
-* {
+*,
+*::before,
+*::after{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
-
+html {
+    font-size: 62.5%; /* root fontSize same as 10px 10/16 = 0.625 */
+}
 body {
     color: #777;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.7;
-    padding: 30px;
+    padding: 1.5rem;
+    box-sizing: border-box;
 }
+
 
 /* header part */
 .header {
@@ -31,16 +27,17 @@ body {
     background-size: cover;
     background-position: top;
     height: 95vh;
+    position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .logo-box {
     position: absolute;
-    top: 5em;
-    left:5em;
+    top: 3.5rem;
+    left: 3.5rem;
 }
 .logo {
-    height: 35px;
+    height: 4rem;
 }
 
 .text-box {
@@ -55,12 +52,13 @@ body {
     color: #fff;
     text-transform: uppercase; 
     backface-visibility: hidden; /* sometime anymation is shaking, this property is preventing the shaking */
+    margin-bottom: 6rem;
 }
 
 .heading-primary-title{
-    font-size: 60px;
-    font-weight: 700;
-    letter-spacing: 35px;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
     display: block;
     animation: moveinLeft 1s ease-out;
     
@@ -76,38 +74,37 @@ body {
 
 
 .heading-primary-sub{
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 2rem;
+    font-weight: 700;
     display: block;
-    letter-spacing: 40.5px;
+    letter-spacing:1.7rem;
     animation: moveinRight;
     animation-duration: 1s;
     animation-timing-function: ease-in;
-    margin-bottom: 3em;
 }
 
 @keyframes moveinLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     50% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0px)
+        transform: translateX(0)
     }
 }
 
 @keyframes moveinRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     50% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
 
     100% {
@@ -120,11 +117,12 @@ body {
 .btn:visited {
     text-decoration: none;
     text-transform: uppercase;
-    padding: 1em 3em;
+    padding: 1rem 3rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s;  /* make animation smoother */
     position: relative;
+    font-size: 1.6rem;
  
 }
 
@@ -133,11 +131,11 @@ body {
     animation-fill-mode: backwards;
 }
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);/* xdirection */
+    transform: translateY(-3rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);/* xdirection */
 }
 .btn:active {
-    transform: translateY(-1px);
+    transform: translateY(-.1rem);
 }
 .btn-white {
     background-color: white;
@@ -149,7 +147,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -169,7 +167,7 @@ body {
 @keyframes movinBtn {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
     }
     
     100% {
