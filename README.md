@@ -1,5 +1,5 @@
 # toursite
 
-This is exercising Advanced CSS 
-without JS
+Practice an advanced CSS and Sass
+without JS :smile:
 
