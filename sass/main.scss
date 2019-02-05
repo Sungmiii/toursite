@@ -15,36 +15,6 @@
 
 
 
-.heading-primary {
-    color: $color-white;
-    text-transform: uppercase; 
-    backface-visibility: hidden; /* sometime anymation is shaking, this property is preventing the shaking */
-    margin-bottom: 6rem;
-    &--title{
-        font-size: 6rem;
-        font-weight: 400;
-        letter-spacing: 3.5rem;
-        display: block;
-        animation: moveinLeft 1s ease-out;
-        /* 
-        animation: name duration timing-function delay iteration-count direction fill-mode;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
-        animation-delay: 3;
-        animation-iteration-count: 3; 
-        */  
-    }
-    &--sub{
-        font-size: 2rem;
-        font-weight: 700;
-        display: block;
-        letter-spacing:1.7rem;
-        animation: moveinRight;
-        animation-duration: 1s;
-        animation-timing-function: ease-in;
-    }
-}
-
 
 
 

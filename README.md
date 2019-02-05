@@ -1,5 +1,9 @@
 # toursite
 
 Practice an advanced CSS and Sass
-without JS :smile:
+without JS :smile:/
+
+What is Sass 
+
+Can organize CSS
 

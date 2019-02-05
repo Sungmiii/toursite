@@ -7,13 +7,10 @@
     box-sizing: inherit;
 }
 html {
-    font-size: 62.5%; /* root fontSize same as 10px 10/16 = 0.625 */
+    font-size: 62.5%; 
+    //this defines what 1rem is
+    /* root fontSize same as 10px 10/16 = 0.625 */
 }
 body {
-    color: $color-gray-dark;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    padding: 1.5rem;
     box-sizing: border-box;
 }
