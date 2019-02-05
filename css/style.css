@@ -1,3 +1,31 @@
+@keyframes moveinLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  50% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveinRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  50% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes movinBtn {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
 *,
 *::before,
 *::after {
@@ -16,6 +44,51 @@ body {
   line-height: 1.7;
   padding: 1.5rem;
   box-sizing: border-box; }
+
+.btn:link, .btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  /* make animation smoother */
+  position: relative;
+  font-size: 1.6rem; }
+
+.btn--animation {
+  animation: movinBtn .5s ease-out .75s;
+  animation-fill-mode: backwards; }
+
+.btn:hover {
+  transform: translateY(-3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  /* xdirection */ }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .5s; }
 
 /* header part */
 .header {
@@ -65,76 +138,3 @@ body {
     animation: moveinRight;
     animation-duration: 1s;
     animation-timing-function: ease-in; }
-
-@keyframes moveinLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  50% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes moveinRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  50% {
-    transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-.btn:link, .btn:visited {
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 1rem 3rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all .2s;
-  /* make animation smoother */
-  position: relative;
-  font-size: 1.6rem; }
-
-.btn--animation {
-  animation: movinBtn .5s ease-out .75s;
-  animation-fill-mode: backwards; }
-
-.btn:hover {
-  transform: translateY(-3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  /* xdirection */ }
-  .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0; }
-
-.btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-  .btn--white::after {
-    background-color: #fff; }
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .5s; }
-
-@keyframes movinBtn {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
