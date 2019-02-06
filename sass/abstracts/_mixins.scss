@@ -8,3 +8,11 @@
     position: relative;
     font-size: 1.6rem;
 }
+
+@mixin clearfix {
+    &::after {
+        content: ""; // otherwise after is not working
+        clear: both;
+        display: table;
+    }
+}
