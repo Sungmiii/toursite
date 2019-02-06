@@ -75,6 +75,47 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-in; }
 
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all .2s;
+  letter-spacing: 2px; }
+  .heading-secondary:hover {
+    transform: skewY(1deg) skewX(10deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.1); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0 40rem 0;
+  margin-top: -20vh; }
+
 /* header part */
 .header {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -98,8 +139,7 @@ body {
 
 .row {
   max-width: 114rem;
-  margin: 0 auto;
-  background-color: darkturquoise; }
+  margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row::after {
@@ -108,8 +148,7 @@ body {
     display: table; }
   .row [class^="col-"] {
     float: left;
-    height: 5rem;
-    background-color: paleturquoise; }
+    height: 5rem; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 4rem; }
   .row .col-1-of-2 {
@@ -169,3 +208,22 @@ body {
   left: 0;
   z-index: -1;
   transition: all .5s; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 0.5px solid #55c57a;
+  padding: 4px;
+  transition: all .2s; }
+
+.btn-text:hover {
+  color: #fff;
+  background-color: #55c57a;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
