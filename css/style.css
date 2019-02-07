@@ -164,6 +164,34 @@ body {
   .row .col-3-of-4 {
     width: calc(3 *((100% -  3 * 4rem)/4) + (2 * 4rem)); }
 
+.compostion {
+  position: relative; }
+  .compostion__photo {
+    width: 55%;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    position: absolute;
+    transition: all .3s; }
+    .compostion__photo:hover {
+      transform: scale(1.05) translateY(-2rem);
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 11;
+      transition: all .2s;
+      outline: 1.5rem solid #55c57a;
+      outline-offset: 1rem; }
+    .compostion__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .compostion__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .compostion__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+  .compostion:hover .compostion__photo:not(:hover) {
+    transform: scale(0.95);
+    transition: all .3s; }
+
 .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
