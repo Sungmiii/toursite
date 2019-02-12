@@ -1,21 +1,27 @@
 .btn {
+    &, // j<- ust .btn
     &:link,
     &:visited{
+        border:none;
+        cursor: pointer;
         @include btnstyle
+        
     }
     &--animation {
         animation: movinBtn .5s ease-out .75s;
         animation-fill-mode: backwards;
     }
     &:hover {
-        transform: translateY(-3rem);
+        transform: translateY(-1.5rem);
         box-shadow: 0 1rem 2rem rgba($color-black, .2);/* xdirection */
         &::after {
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
         }
     }
-    &:active {
+    &:active,
+    &:focus {
+        outline: none;
         transform: translateY(-.1rem);
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }
