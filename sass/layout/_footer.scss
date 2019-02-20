@@ -3,6 +3,9 @@
      padding: 10rem 0;
      font-size: 1.4rem;
      color: $color-gray-bitlight;
+     @include responsive(tabPort){
+        padding: 8rem 0;
+     }
      &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
@@ -15,6 +18,10 @@
         border-top: 1px solid $color-gray-bitlight;
         padding-top:2rem;
         display: inline-block;
+        @include responsive(tabPort){
+        width: 100%;
+        text-align: center;
+      }
      }
      &__list {
         list-style: none;
@@ -48,5 +55,9 @@
         text-align: justify;
         width: 80%;
         float: right;
+        @include responsive(tabPort){
+         width: 100%;
+         float: none;
+       }
      }
  }

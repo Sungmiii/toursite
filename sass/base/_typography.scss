@@ -3,7 +3,6 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    padding: 1.5rem;
 }
 
 .heading-primary {
@@ -11,12 +10,17 @@ body {
     text-transform: uppercase; 
     backface-visibility: hidden; /* sometime anymation is shaking, this property is preventing the shaking */
     margin-bottom: 6rem;
+    
     &--title{
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
         display: block;
         animation: moveinLeft 1s ease-out;
+        @include responsive(phone){ //600px
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
         /* 
         animation: name duration timing-function delay iteration-count direction fill-mode;
         animation-duration: 1s;
@@ -33,6 +37,9 @@ body {
         animation: moveinRight;
         animation-duration: 1s;
         animation-timing-function: ease-in;
+        @include responsive(phone){ //600px
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -44,6 +51,13 @@ body {
     @include gradienttypo;
     transition: all .2s;
     letter-spacing: .2rem;
+    @include responsive(tabPort) {
+        font-size: 3rem;
+    }
+    @include responsive(phone){ //600px
+            font-size: 2.5rem;
+            letter-spacing: 0.1rem;
+    }
     &:hover {
         transform: skewY(1deg) skewX(10deg) scale(1.1);//110%
         text-shadow: .5rem 1rem 2rem rgba($color-black,.1);
