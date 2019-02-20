@@ -8,13 +8,23 @@
 }
 html {
     font-size: 62.5%; 
-    //this defines what 1rem is
+    //this defines what 1rem is =10px
     /* root fontSize same as 10px 10/16 = 0.625 */
    /*  @include responsivePhone {
         font-size: 50%;
     } */
-    @include responsive(phone){
+    
+    @include responsive(tabLand){ //1200px
+        font-size: 56.25%; // 1 rem = 9px, 9/16 =56.25%
+    } // 이거 먼저 안하고 아래에 두면 케스케이딩 룰상 리스폰시브테브랜드가 적용된다.
+    @include responsive(tabPort){ //900px
+        font-size: 50%; //1 rem = 8px, 8/16 =50% 
+    }
+    /* @include responsive(phone){ //600px
         font-size: 50%;
+    } */ // 없어도된다 리스폰시브 테브포트 가 50%이니까
+    @include responsive(bigDesktop){
+        font-size: 75%; // 1rem = 12px, 12/16 = 75%
     }
 }
 body {

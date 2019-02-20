@@ -57,10 +57,19 @@ html {
   /* root fontSize same as 10px 10/16 = 0.625 */
   /*  @include responsivePhone {
         font-size: 50%;
+    } */
+  /* @include responsive(phone){ //600px
+        font-size: 50%;
     } */ }
-  @media (max-width: 600px) {
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }

@@ -50,25 +50,25 @@
 -tabLand
 -bigDesktop
  */
-
+//1em = 16px
 @mixin responsive($breakPoint) {
     @if $breakPoint == phone {
-        @media (max-width: 600px){
+        @media (max-width: 37.5em){ //600/16 = 37.5
             @content
            }
     }
     @if $breakPoint == tabPort {
-        @media (max-width: 900px){
+        @media (max-width: 56.25em){ //900/16 =56.25
             @content
            }
     }
     @if $breakPoint == tabLand {
-        @media (max-width: 1200px){
+        @media (max-width: 75em){ //1200/16 = 75
             @content
            }
     }
     @if $breakPoint == bigDesktop {
-        @media (min-width: 1800px){
+        @media (min-width: 112.5em){ //1800/16 = 112.5
             @content
            }
     }
