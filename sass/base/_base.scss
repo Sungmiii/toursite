@@ -10,6 +10,12 @@ html {
     font-size: 62.5%; 
     //this defines what 1rem is
     /* root fontSize same as 10px 10/16 = 0.625 */
+   /*  @include responsivePhone {
+        font-size: 50%;
+    } */
+    @include responsive(phone){
+        font-size: 50%;
+    }
 }
 body {
     box-sizing: border-box;

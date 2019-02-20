@@ -1,3 +1,22 @@
+/*
+0 - 600px phone
+600 -900px tablet
+900-1200px tablet landscape
+1200 - 1800px desktop - normal style toursite
+1800px - bigdesktop
+*/
+/* @mixin responsivePhone {
+    @media (max-width: 600px){
+     @content
+    }
+}
+ */
+/* breakPoint argument choices
+-phone
+-tabPort
+-tabLand
+-bigDesktop
+ */
 @keyframes moveinLeft {
   0% {
     opacity: 0;
@@ -35,7 +54,13 @@
 
 html {
   font-size: 62.5%;
-  /* root fontSize same as 10px 10/16 = 0.625 */ }
+  /* root fontSize same as 10px 10/16 = 0.625 */
+  /*  @include responsivePhone {
+        font-size: 50%;
+    } */ }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box; }
