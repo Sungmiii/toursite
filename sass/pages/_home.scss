@@ -2,6 +2,9 @@
     background-color: $color-gray-light;
     padding: 25rem 0;
     margin: -20vh 0; // header 95vh, right side height 75vh : 95-75 =20vh
+    @include responsive(tabPort){
+        padding: 20rem 0;
+    }
 }
 
 .section-features{
@@ -15,18 +18,27 @@
     & > * {
         transform: skewY(7deg); // select direct all child
     }
+    @include responsive(tabPort){
+        padding: 10rem 0;
+    }
 }
 
 .section-tours {
-    padding: 25rem 0 5rem 0;
+    padding: 25rem 0 15rem 0;
     background-color: $color-gray-light;
     margin-top: -20vh;
+    @include responsive(tabPort){
+        padding: 20rem 0 10rem 0;
+    }
 }
 
 .section-stories {
     padding: 15rem 0 5rem 0;
     background-color: transparent;
     position: relative;
+    @include responsive(tabPort){
+        padding: 10rem 0;
+    }
 }
 
 .section-booking {
@@ -34,6 +46,9 @@
     background-image: linear-gradient(to right bottom,
     $color-primary-light,
     $color-primary-dark);
+    @include responsive(tabPort){
+        padding: 10rem 0;
+    }
 }
 
 .book {

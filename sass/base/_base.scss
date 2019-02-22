@@ -30,7 +30,7 @@ html {
 body {
     box-sizing: border-box;
     padding: 1.5rem;
-    @include responsive(phone){ //600px
+    @include responsive(tabPort){ //600px
         padding: 0;
     } 
 }
