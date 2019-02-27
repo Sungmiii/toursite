@@ -237,14 +237,18 @@ body {
 
 /* header part */
 .header {
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   height: 95vh;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (min-resolution: 192dpi) and (min-width: 37.5rem), (min-width: 125rem) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(243, 163, 51, 0.8), rgba(205, 69, 69, 0.8)), url(../img/hero.jpg); } }
   @media (max-width: 37.5em) {
     .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
@@ -840,8 +844,8 @@ body {
   .form__group .btn--green {
     position: absolute;
     top: 0;
-    left: 20%;
-    transform: translate(0, -20%); } }
+    left: 25%;
+    transform: translate(0, -25%); } }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
