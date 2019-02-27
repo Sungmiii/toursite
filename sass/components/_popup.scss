@@ -22,20 +22,41 @@
         opacity: 0;
         transform: translate(-50%,-50%) scale(.1); // mixin has already transform so add samething again
         transition: all .4s .2s; // whichone howlong howlong delay
+
+        @include responsive(tabLand){
+            height: 50%;
+         }
+        
     }
     &__left {
         width: 33.33%;
         display: table-cell;
+        @include responsive(tabLand){
+               display: table-row;
+            }
+  
     }
     &__right {
        width: 66.66%;
        display: table-cell;
        vertical-align: middle;
        padding: 3rem 5rem;
+
+       @include responsive(tabLand){
+           display: table-row; 
+           border-collapse: separate;
+           border-spacing: 5rem;
+        }
     }
     &__img{
       display: block;
       width: 100%;
+      @include responsive(tabLand){
+        width: 50%;
+        float: left;
+        }
+      
+      
     }
     &__text{
         font-size: 1.4rem;

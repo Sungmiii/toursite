@@ -7,6 +7,14 @@
     padding: 6rem 6rem 6rem 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
+
+    @include responsive(tabPort){
+        width: 100%;
+        padding: 4rem 4rem 4rem 7rem;
+    }
+    @include responsive(phone){
+        transform: skewX(0);
+    }
     &__img{
         height: 100%;
         width: 100%;
@@ -24,9 +32,15 @@
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+        @include responsive(phone){
+            transform: translateX(-3rem) skewX(0deg);
+        }
     }
     &__text {
         transform: skewX(12deg);
+        @include responsive(phone){
+            transform: skewX(0deg);
+        }
     }
     &__caption {
         color:$color-white;
